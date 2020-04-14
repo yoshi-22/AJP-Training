@@ -9,9 +9,9 @@ import java.util.Scanner;
         System.out.println(number   +   "桁");
         
         str = A.next();
-        System.out.println(str);
+        System.out.println("頭文字：" +   str);
         
         str = A.next();
-        System.out.println(str);
+        System.out.println("語尾：" +   str);
     }
 }
