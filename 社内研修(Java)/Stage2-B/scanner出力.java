@@ -11,15 +11,15 @@ import java.util.Scanner;
         String str2 = str.substring(0,1);
         
         //語尾を入れる変数を宣言
-        String str3 = str.substring(str.length()-1);
+        String str3 = str.substring(str.length() - 1);
         
-        System.out.println("入力された値は " + str + " です。");
-        System.out.println(number   +   "桁");
+        System.out.println("入力された値は" + str + " です。");
+        System.out.println("桁数：" + number + "桁");
         
         //文字数が2文字以上の場合のみ出力する
-        if (number>=2){
-            System.out.println("頭文字：" +   str2);
-            System.out.println("語尾：" +   str3);
+        if (number >= 2){
+            System.out.println("頭文字：" + str2);
+            System.out.println("語尾：" + str3);
         }
     }
 }
