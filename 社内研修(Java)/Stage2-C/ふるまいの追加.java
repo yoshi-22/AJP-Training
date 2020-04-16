@@ -15,20 +15,20 @@ import java.util.Scanner;
             //語尾の変数を宣言
             String str3 = str.substring(str.length() - 1);
     
-        System.out.println("入力された値は" + str + " です。");
-        System.out.println("桁数：" + number + "桁");
+            System.out.println("入力された値は" + str + " です。");
+            System.out.println("桁数：" + number + "桁");
         
         //文字数が2文字以上の場合のみ出力する
-        if (number >= 2){
+            if (number >= 2){
             System.out.println("頭文字：" + str2);
             System.out.println("語尾：" + str3);
         }
         
         //Aが存在するならYesを出力
-        if (str.contains("A"))
+            if (str.contains("A"))
         {
             System.out.println("文字列にAを含む:" + "Yes");
-        }else{
+        }   else{
             System.out.println("文字列にAを含む:" + "No");
              }
         }
