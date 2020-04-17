@@ -22,14 +22,18 @@ import java.util.Scanner;
             if (number >= 2){
             System.out.println("頭文字：" + str2);
             System.out.println("語尾：" + str3);
-        }
+            }
         
-        //Aが存在するならYesを出力
-            if (str.contains("A"))
-        {
-            System.out.println("文字列にAを含む:" + "Yes");
-        }   else{
-            System.out.println("文字列にAを含む:" + "No");
-             }
+        //変数answerを宣言
+            String answer = "";
+            
+        //Aが存在するならanswerの値はYesとなり、それ以外はNoとなる
+            if (str.contains("A")){
+                answer = "Yes";
+            }else{
+                answer = "No" ;
+            }
+            
+            System.out.println("文字列にAを含む:" + answer);
         }
     }
