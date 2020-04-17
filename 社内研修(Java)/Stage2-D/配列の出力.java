@@ -3,11 +3,14 @@ public class Value  {
     public static void main(String[] args) {
         
         //変数strを宣言
-        String str = "１：orange/２：apple/３：cherry/４：grape/５：apple";
+        String str = "orange/apple/cherry/grape/apple";
         
         //配列変数fruitsを宣言
-        //変数strを/で区切って出力する
-        String[] fruits = str.split("/");
-        Arrays.stream(fruits).forEach(e -> System.out.println(e));
+        String[] fruits = str.split("/",0);
+        
+        //配列変数fruitsを順番に出力
+        for (int i = 0; i < 5; i++) {
+        System.out.println(fruits[i]);
+        }
     }
 }
