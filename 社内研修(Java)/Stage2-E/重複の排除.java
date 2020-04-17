@@ -18,7 +18,7 @@ public class Repeat{
 			}
 		}
 	}
-		System.out.println(fruitsList);
+		System.out.println("1:" + fruitsList.get(0));
+        System.out.println("2:" + fruitsList.get(1));
+		}
 	}
-}
-	
