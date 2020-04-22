@@ -29,8 +29,8 @@ public class Time {
 				cnt++;
 				
 				//20回実行で終了
-				if ( cnt >= 20 ) timer.cancel();
-				if ( cnt >= 20 ){
+				if ( cnt >= 21 ){
+					timer.cancel();
 					System.out.println("20秒カウント終わりました");
 				}
 				
