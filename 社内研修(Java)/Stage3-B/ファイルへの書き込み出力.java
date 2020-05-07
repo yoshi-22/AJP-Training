@@ -27,19 +27,19 @@ public class Text {
       Date date = new Date();
       SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
       String fileName = sdf.format(date) + "_output.txt";
-    
       File file = new File(writing + "/" + fileName);
+      
       // FileWriterクラスのオブジェクトを生成する
-      FileWriter filewriter = new FileWriter(file);
+      FileWriter fileWriter = new FileWriter(file);
       // PrintWriterクラスのオブジェクトを生成する
-      PrintWriter printwriter = new PrintWriter(new BufferedWriter(filewriter));
+      PrintWriter printWriter = new PrintWriter(new BufferedWriter(fileWriter));
      
       //ファイルに書き込む
-      printwriter.println(introduction[0]);
-      printwriter.println(introduction[1]);
+      printWriter.println(introduction[0]);
+      printWriter.println(introduction[1]);
      
       //ファイルを閉じる、例外があれば表示する
-      printwriter.close();
+      printWriter.close();
         }catch (IOException e) {
           e.printStackTrace();
         }
