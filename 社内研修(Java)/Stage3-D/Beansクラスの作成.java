@@ -2,9 +2,8 @@ import java.util.Date;
 import java.io.*;
 
 public class Main{
-    public static void main(String[]args){
-       
-        //内部クラスの作成
+    
+         //内部クラスの作成
          class UserBean implements Serializable{
             private static final long serialVersionUID = 1L;
         
@@ -39,7 +38,6 @@ public class Main{
                 this.age = age;
             }
         
-        
             //ユーザーIDのgetter
             public String getId(){
                 return this.id;
@@ -61,5 +59,7 @@ public class Main{
                 return this.age;
         }
     }
+    public static void main(String[]args){
+        
     }
 }
