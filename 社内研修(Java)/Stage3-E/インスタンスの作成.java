@@ -43,7 +43,7 @@ import java.io.*;
                 this.pass = pass;
             }
             //生年月日のsetter
-            public void setBirthDay(String birthday){
+            public void setBirthDay(String birthDay){
                 this.birthDay = birthDay;
             }
             //年齢のsetter
