@@ -8,27 +8,12 @@ import java.io.*;
             private static final long serialVersionUID = 1L;
         
             //クラスフィールドの定義
-            private  String id;
-            private  String name;
-            private  String pass;
-            private  Date date;
-            private  int age;
+            private String id;
+            private String name;
+            private String pass;
+            private Date date;
+            private int age;
             private String birthDay;
-            
-            //コンストラクタの設定
-            UserBean(){
-                this.id = "４６４９"; 
-                this.name = "山本義之";
-                this.pass = "秘密";
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.YEAR, 1998); //年を設定
-                calendar.set(Calendar.MONTH, 1); //月を設定
-                calendar.set(Calendar.DAY_OF_MONTH, 2);//日を設定
-                this.date = calendar.getTime();
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
-                this.birthDay =  sdf.format(date);
-                this.age = 22;
-        }
             
             //ユーザIDのsetter
             public void setId(String id){
@@ -47,10 +32,9 @@ import java.io.*;
                 this.birthDay = birthDay;
             }
             //年齢のsetter
-            public void setInt(int age){
+            public void setAge(int age){
                 this.age = age;
             }
-        
             //ユーザーIDのgetter
             public String getId(){
                 return this.id;
@@ -63,29 +47,42 @@ import java.io.*;
             public String getPass(){
                 return this.pass;
             }
-
             //生年月日のgetter
             public String getBirthDay(){
                 return this.birthDay;
             }
-
             //年齢のgetter
             public int getAge(){
                 return this.age;
             }
-            
-    }
+             public UserBean(String id,String name,String pass,int age){
+		        this.id = id;
+		        this.name = name;
+		        this.pass = pass;
+		        this.age = age;
+	}
+	        @Override
+	        public String toString(){
+	            
+	            //生年月日を設定
+	            Calendar calendar = Calendar.getInstance();
+                calendar.set(Calendar.YEAR, 1998); 
+                calendar.set(Calendar.MONTH, 1); 
+                calendar.set(Calendar.DAY_OF_MONTH, 2);
+                this.date = calendar.getTime();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
+                this.birthDay =  sdf.format(date);
+	            String crlf = System.getProperty("line.separator");
+		        return "ユーザーID:" + id + crlf +"ユーザー名:" + name + crlf + "パスワード:" + pass + crlf + "生年月日:" + birthDay  + crlf + "年齢：" + age ;
+	}
+}
         public class Main2{
     	    public static void main(String[]args){
-    	         
-    	        //Beansクラスのインスタンスを生成
-	        	UserBean beans = new UserBean();
+    	        
+    	        //Beansクラスのインスタンスを生成し、値を代入する
+	        	UserBean beans = new UserBean("4649", "山本義之","秘密",22);
 	        	
-	        	//それぞれのインスタンスの値を出力する
-	        	System.out.println("ユーザーID：" + beans.getId());
-	        	System.out.println("ユーザー名：" + beans.getName());
-	        	System.out.println("パスワード：" + beans.getPass());
-	        	System.out.println("生年月日：" + beans.getBirthDay());
-	        	System.out.println("年齢：" + beans.getAge());
-}
+	        	//インスタンスの値を出力する
+                System.out.println(beans);
+    }
 }
