@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.io.*;
 
      //内部クラスの作成
-     class UserBean implements Serializable{
+    class UserBean implements Serializable{
             private static final long serialVersionUID = 1L;
             
             //クラスフィールドの初期値の設定
@@ -68,7 +68,7 @@ import java.io.*;
                 return this.place;
             }
             //コンストラクタの設定
-            public UserBean(String id,String name,String pass,String birthDay,int age){
+            public UserBean(String id,String name,String pass,int age){
 		        this.id = id;
 		        this.name = name;
 		        this.pass = pass;
@@ -82,19 +82,19 @@ import java.io.*;
 	            Calendar calendar = Calendar.getInstance();
                 calendar.set(Calendar.YEAR, 1998); 
                 calendar.set(Calendar.MONTH, 1); 
-                calendar.set(Calendar.DAY_OF_MONTH, 1);
+                calendar.set(Calendar.DAY_OF_MONTH, 2);
                 this.date = calendar.getTime();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
                 this.birthDay =  sdf.format(date);
 	            String crlf = System.getProperty("line.separator");
 		        return "ユーザーID:" + id + crlf +"ユーザー名:" + name + crlf + "パスワード:" + pass + crlf + "生年月日:" + birthDay  + crlf + "年齢：" + age ;
 	}
-    }
-        public class Main3{
+}
+    public class Main3{
     	    public static void main(String[]args){
     	         
     	        //Beansクラスのインスタンスを生成
-	        	UserBean beans = new UserBean("4649", "山本義之","秘密","",22);
+	        	UserBean beans = new UserBean("4649", "山本義之","秘密",22);
 	        	
 	        	//それぞれのインスタンスの値を出力する
                 System.out.println(beans);
