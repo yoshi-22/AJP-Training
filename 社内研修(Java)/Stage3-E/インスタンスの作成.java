@@ -60,7 +60,7 @@ import java.io.*;
 		        this.name = name;
 		        this.pass = pass;
 		        this.age = age;
-	}
+	        }
 	        @Override
 	        public String toString(){
 	            
@@ -76,8 +76,8 @@ import java.io.*;
 		        return "ユーザーID:" + id + crlf +"ユーザー名:" + name + crlf + "パスワード:" + pass + crlf + "生年月日:" + birthDay  + crlf + "年齢：" + age ;
 	}
 }
-        public class Main2{
-    	    public static void main(String[]args){
+    public class Main2{
+        public static void main(String[]args){
     	        
     	        //Beansクラスのインスタンスを生成し、値を代入する
 	        	UserBean beans = new UserBean("4649", "山本義之","秘密",22);
