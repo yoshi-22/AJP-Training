@@ -83,11 +83,11 @@ import java.io.*;
 	        beans.setAge(22);
 	        
 	        //インスタンスの値を出力する
-            System.out.println("ユーザID：" + beans.getId());
-            System.out.println("ユーザ名：" + beans.getName());
-            System.out.println("パスワード：" + beans.getPass());
-            System.out.println("生年月日：" + beans.getBirthDay());
-            System.out.println("年齢：" + beans.getAge());
+	        System.out.println("ユーザID：" + beans.getId());
+	        System.out.println("ユーザ名：" + beans.getName());
+	        System.out.println("パスワード：" + beans.getPass());
+	        System.out.println("生年月日：" + beans.getBirthDay());
+	        System.out.println("年齢：" + beans.getAge());
 	        System.out.println("所属地：" + beans.getPlace());
 	        System.out.println("カウント数：" + UserBean.count);
         }
