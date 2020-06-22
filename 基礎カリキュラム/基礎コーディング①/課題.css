@@ -1,0 +1,12 @@
+.first{
+  background-color: #ff0000;
+  height:375px;
+  width:1500px;
+  background: linear-gradient(90deg,#ff0000 0% 50%,#ffff00 50% 100%)
+}
+
+.third{
+ background-color: #00B0F0;
+ height:375px;
+ width:1500px;
+}
