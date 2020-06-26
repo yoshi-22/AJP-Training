@@ -1,0 +1,249 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*ホームページの背景を設定*/
+body{
+  background-color:#F6F6F6;
+}
+
+/*冒頭の青い線を引く*/ 
+.line{
+    border-top: 10px solid #7CCFCD;
+    width: 100%;      
+}
+
+/*デンタルクリニックのロゴの配置*/ 
+.image1{
+  position: relative;
+  top: 75px;
+  left:400px;
+  height:40px;
+  width:300px;
+}
+
+/*基本情報の配置*/
+.information p{
+  position:relative;
+  left:1500px;
+}
+
+/*歯科医院の名前の大きさ*/
+#name{
+	font-size:15px;
+}
+
+/*予約時間のレイアウト*/
+#reserveTime{
+	 border : solid 1px #333 ; 
+	 padding:10px;
+	 width:400px;
+}
+
+/*日曜日の色を変化*/
+#sunday{
+	color:red;
+}
+
+/*電話番号のフォント*/
+#telephone{
+	font-size:28px;
+	font-weight: bold
+}
+
+/*トップメニューのレイアウト naviの設定*/
+.navi {
+  position: relative;
+  top: 100px;
+  left:500px;
+  float:left 50%;
+}
+.navi ul {
+  display: table;
+  table-layout: fixed;
+  width: 2000px;
+  margin: 0 auto;
+}
+.navi li {
+  border-left: 1px solid #FFFFFF ;
+  display: table-cell;
+}
+.navi li:last-child {
+  border-right: 1px solid #FFFFFF;
+}
+.navi a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  background-color: #7CCFCD;
+  padding: 20px 0;
+  width:270px;
+}
+.navi li:hover {
+  opacity:0.5;
+}
+
+/*メイン画像のレイアウト設定*/ 
+.mainImage{
+  position: relative;
+  top: 170px;
+  left:850px;
+  width:1000px;
+}
+
+/*新着情報のレイアウト作成　topicsの設定*/
+.topics{
+    width:1000px;
+	  position: relative;
+    top: 250px;
+    left:850px;
+    background-color:white;
+}
+.topics dl {
+padding: 15px 20px;
+border-bottom: 1px solid #ccc;
+}
+.topics dt {
+padding-bottom: 11px;
+font-weight: bold; 
+position: relative;
+    top: 35px;
+}
+.topics dd {
+margin-left: 20%;
+}
+
+/*一般歯科と審美歯科のタイトルの共通レイアウト作成*/
+.menu{
+	background-color: #7CCFCD;
+	width:335px;
+	border-radius:2px;
+}
+
+/*一般歯科と審美歯科の共通レイアウト作成 clinicの作成*/
+.clinic{
+  border: solid 1px #7CCFCD;
+  padding: 0 0.5em;
+  width:300px;
+  height:250px;
+  margin: 0;
+  padding: 0 15px;
+  color: #fff;
+}
+.clinic div{
+	 border-bottom: 1px solid #7CCFCD;
+}
+.clinic li {
+  line-height: 1.5;
+  padding: 0.5em 0 0.5em 1.4em;
+  list-style-type: none!important;
+  font-size:15px;
+  text-align:left;
+}
+.clinic li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f138";
+  position: absolute;
+  left : 0.5em; 
+  color: #ffb03f; 
+}
+
+/*サイドメニューのタイトル配置(一般歯科)*/
+.menuTitle1 {
+    position:relative;
+    bottom:960px;
+    left:500px;
+}
+
+/*サイドメニューのタイトル配置(審美歯科)*/
+.menuTitle2 {
+    position:relative;
+    bottom:930px;
+    left:500px;
+}
+
+/*サイドメニュー(一般歯科)の配置*/
+.tooth_clinic1 {
+  position: relative;
+  bottom:960px;
+  left:500px;
+}
+
+/*サイドメニュー(審美歯科)の配置*/
+.tooth_clinic2{
+  position: relative;
+  bottom:930px;
+  left:500px;
+}
+
+
+/*ホームページ下部のメニュー作成*/
+.menuList{
+  position: relative;
+  bottom: 260px;
+  left:500px;
+  float:left 50%;
+  background-color: #7CCFCD;
+  width:50%;
+}
+.menuList ul {
+  display: table;
+  table-layout: fixed;
+  width: 500px;
+  margin: 0 auto;
+}
+.menuList li {
+  display: table-cell;
+  width:100px;
+}
+
+.menuList p{
+  font-size:20px;
+}
+
+.menuList a {
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  background-color: #7CCFCD;
+  width:250px;
+}
+.menuList a:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f138";
+  color: #ffb03f; 
+}
+
+/*ページ下部の住所のレイアウト*/
+.address{
+	text-align:right;
+	padding-bottom:10px;
+	position:relative;
+	bottom:200px;
+}
+
+/*ページ下部の青い線の配置*/
+.footer hr{
+  position:relative;
+  left:500px;
+  bottom:200px;
+  width:50%;
+}
+
+.address{
+  font-size:15px;
+  position:relative;
+  right:850px;
+}
+
+/*ページ下部のcopyrightのレイアウト*/
+.copyright{
+	text-align:center;
+	margin:5px;
+	font-size:30px;
+	position:relative;
+	bottom:200px;
+}
