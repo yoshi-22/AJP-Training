@@ -4,32 +4,37 @@ import java.util.Random;
 public class BlackJack{
     public static void main(String args[]){
         
-        int i = 0;
         
         //配列numbersを宣言
         int[] numbers = {1,2,3,4,5,6,7,8,9,10};
         
-        //子合計の変数resultを宣言
+        //ランダムの値をnumberとnumber2に代入する
         Random random = new Random();
         int number = numbers[random.nextInt(10)];
         int number2 = numbers[random.nextInt(10)];
-        int result = number;
         int randomValue = random.nextInt();
+        
+        //子合計の変数resultを宣言
+        int result = number;
+        
+        //現在の合計を表示する
         System.out.println("数値：" + number + " 合計：" + result);
         System.out.println("次のランダム数値を取得しますか[Yes/No]");
+        
+        //コンソール入力を受け付けて、値をstrに代入する
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
-
-        //numbersの要素をランダム表示し、値を一つ取得する
+        
+        int i = 0;
         outside:while(i < 100){
             
-            //Yesの場合
+            //Yesを入力した場合の処理
             if (str.equals("Yes")){
                 number2 = numbers[random.nextInt(10)];
                 result = result + number2; 
                 System.out.println("数値：" + number2 + " 合計：" + result);
                 
-                //合計が21を超えると初めに戻る
+                //合計が21を超えるとoutsideに戻る
                 if(result > 21){
                     System.out.println("lose");
                     number = numbers[random.nextInt(10)];
@@ -77,12 +82,15 @@ public class BlackJack{
                     break;
                 }
                 
-            //YesとNo以外が入力された場合は同じ表示を繰り返す
+            //YesとNo以外が入力された場合はoutsideに戻る
             }else{
-                    System.out.println("数値：" + number + " 合計：" + result);
-                    System.out.println("次のランダム数値を取得しますか[Yes/No]");
-                    scan = new Scanner(System.in);
-                    str = scan.nextLine();
+                number = numbers[random.nextInt(10)];
+                result = number;
+                System.out.println("次のランダム数値を取得しますか[Yes/No]");
+                System.out.println("数値：" + number + " 合計：" + result);
+                scan = new Scanner(System.in);
+                str = scan.nextLine();
+                continue outside;
             }
             i ++;
         }
